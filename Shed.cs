@@ -67,11 +67,10 @@ namespace Phenov_test_program
 
             set
                 {
-                    if (value > 0 && value< 100)
-                        height = value;
+                    if (value > 0 && value < 100)
+                            height = value;
                     else
-                        Console.WriteLine("Height is not in acceptable range.");
-                    //return ("This is unacceptable...Aohhhhhhhhh.(Lemon prince.)");
+                        Console.WriteLine("Height is not in acceptable range.");                    
                 }
         }
 
@@ -112,3 +111,5 @@ namespace Phenov_test_program
         }
     }
 }
+
+

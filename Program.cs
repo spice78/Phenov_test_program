@@ -1,17 +1,41 @@
 ﻿using System;
 using System.Globalization;
+using static System.Console;
+
 
 namespace Phenov_test_program
 {
     class Program
     {
-        //static int[] array = { 10, 98, 78, 4, 54, 25, 84, 41, 30, 87, 6};//массив для qsort
+        static int[] array = { 10, 98, 78, 4, 54, 25, 84, 41, 30, 87, 6};//массив для qsort
 
         static void Main()
         {
-            Person p = new Person("Anus", "Jopy");
-            Console.WriteLine(p.ToString());
-            Console.WriteLine(p.FirstName, p.LastName);
+            Figure rest;
+            
+            rest = new RectangleFigure();
+            rest.Draw();
+            rest = new CircleFigure();
+            rest.Draw();
+
+            /*Person p1 = new Person("Anus", "Jopy");
+            Person p2 = new Person("Anus", "Jopy");
+            Person p3 = p1;
+            Person p4 = new Person("Jopy", "Anus");
+
+            WriteLine(Person.ComparePersons(p1, p2)); // одинаковые параметры
+            WriteLine(Person.ComparePersons(p1, p3)); // одинаковые 
+            WriteLine(Person.ComparePersons(p2, p3)); // одинаковые параметры
+            WriteLine(Person.ComparePersons(p1, p4)); // не одинаковые 
+
+            Write('\n');
+
+            WriteLine(p1.ComparePersons(p2));
+            WriteLine(p1.ComparePersons(p3));
+            WriteLine(p2.ComparePersons(p3));
+            WriteLine(p1.ComparePersons(p4));*/
+
+            //Console.WriteLine(p1.ToString());
 
             //Sum();
 
@@ -34,9 +58,9 @@ namespace Phenov_test_program
             /*myFirstShed.Width = 20;
             myFirstShed.Height = 10;                        
             myFirstShed.Lengthwise = myFirstShed.Height;*/
-            int vx = 1;
-            int vy = 2;
-            int vz = 3;
+            //int vx = 1;
+            //int vy = 2;
+            //int vz = 3;
             //myFirstShed.ExpandAndGetSize(ref vx, ref vy, ref vz);
             //myFirstShed.ExpandAndGetSize(7, out vx, out vy, out vz);
 
@@ -50,16 +74,16 @@ namespace Phenov_test_program
             foreach (string i in args)
                 Console.WriteLine(i);*/ //вызов аргументов
             
-            Console.Write("Press any key to exit....");
-            Console.ReadLine();
+            Write("Press any key to exit....");
+            ReadLine();
 
         }
 
         static void Sum()
         {            
             int sum = 1;
-            Console.Write("Enter max = ");
-            int max = Convert.ToInt32(Console.ReadLine(), NumberFormatInfo.CurrentInfo);
+            Write("Enter max = ");
+            int max = Convert.ToInt32(ReadLine(), NumberFormatInfo.CurrentInfo);
             int i = 2;
             do
             {
@@ -71,7 +95,7 @@ namespace Phenov_test_program
             //Console.ReadLine();
         }
 
-        /*static void sort(int l, int r) //qsort
+        static void sort(int l, int r) //qsort
         {
             int i = l;
             int j = r;
@@ -94,6 +118,6 @@ namespace Phenov_test_program
                 sort(l, j);
             if (i < r)
                 sort(i, r);
-        }*/
-    }    
+        }
+    }
 }
