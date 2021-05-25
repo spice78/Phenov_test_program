@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Threading;
 using static System.Console;
 
 
@@ -11,12 +12,12 @@ namespace Phenov_test_program
 
         static void Main()
         {
-            Figure rest;
+            /*Figure rest;
             
             rest = new RectangleFigure();
             rest.Draw();
             rest = new CircleFigure();
-            rest.Draw();
+            rest.Draw();*/
 
             /*Person p1 = new Person("Anus", "Jopy");
             Person p2 = new Person("Anus", "Jopy");
@@ -73,8 +74,24 @@ namespace Phenov_test_program
             /*string[] args = Environment.GetCommandLineArgs();
             foreach (string i in args)
                 Console.WriteLine(i);*/ //вызов аргументов
+
+         ConsoleColor[] colors = { ConsoleColor.Blue, ConsoleColor.Red, ConsoleColor.White, ConsoleColor.Yellow };
+            //foreach (ConsoleColor color in colors)
             
-            Write("Press any key to exit....");
+            //while (true)
+            //{
+                foreach (ConsoleColor color in colors)
+                {
+                    CursorLeft = (BufferWidth - color.ToString().Length) / 2;
+                    CursorTop = 10;
+                    ForegroundColor = color;
+                    WriteLine(color);
+                    Thread.Sleep(1000);
+                    Clear();                   
+                }
+            //}
+            ForegroundColor = ConsoleColor.White;
+            WriteLine("Press any key to exit....");
             ReadLine();
 
         }
