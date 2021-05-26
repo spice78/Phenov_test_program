@@ -76,9 +76,9 @@ namespace Phenov_test_program
                 Console.WriteLine(i);*/ //вызов аргументов
 
          ConsoleColor[] colors = { ConsoleColor.Blue, ConsoleColor.Red, ConsoleColor.White, ConsoleColor.Yellow };
-            //foreach (ConsoleColor color in colors)
             
-            //while (true)
+            //ConsoleColor color;
+            //for (color = ConsoleColor.Black; color <= ConsoleColor.White; color++)
             //{
                 foreach (ConsoleColor color in colors)
                 {
@@ -91,7 +91,7 @@ namespace Phenov_test_program
                 }
             //}
             ForegroundColor = ConsoleColor.White;
-            WriteLine("Press any key to exit....");
+            Write("Press any key to exit....");
             ReadLine();
 
         }
